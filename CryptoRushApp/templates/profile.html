@@ -1,0 +1,62 @@
+{% load static %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"/>
+
+      <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<body class="img js-fullheight" style="background-image: url({% static 'img/profile.jpg' %});">
+
+   
+    <div class="update-profile">
+      
+
+   
+
+        <form action="#" method="post" enctype="multipart/form-data" style="
+        margin-top: 170px;">
+           <div class="flex">
+
+              <div class="inputBox">
+
+                 <span style="
+                 color: gold;">First Nmae :</span>
+                 <input type="text" name="update_name" value="{{pdb.first_name}}" class="box" disabled>
+                 <span style="
+                 color: gold;">Email :</span>
+                 <input type="email" name="update_email" value="{{pdb.email}}" class="box" disabled>
+              </div>
+
+
+              <div class="inputBox">
+                 <input type="hidden" name="#" value="#">
+                 <span style="
+                 color: gold;">Last Name:</span>
+                 <input value="{{pdb.username}}" class="box" disabled>
+                 <span style="
+                 color: gold;">Phone Number:</span>
+                 <input value="{{pdb.last_name}}" class="box" disabled>
+
+              </div>
+           </div>
+
+           <a href="{% url 'home' %}" class="delete-btn">Go back</a>
+
+           <a href="{% url 'logout' %}">Logout</a>
+        </form>
+
+     </div>
+</body>
+<script src="{% static 'js/profile.js' %}"></script>
+</html>
